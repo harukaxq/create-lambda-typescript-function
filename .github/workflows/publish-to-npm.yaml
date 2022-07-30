@@ -9,6 +9,6 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - uses: harukaxq/create-lambda-typescript-function
+      - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NODE_AUTH_TOKEN }}
