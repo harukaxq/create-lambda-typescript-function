@@ -1,0 +1,14 @@
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - uses: harukaxq/create-lambda-typescript-function
+        with:
+          token: ${{ secrets.NODE_AUTH_TOKEN }}
