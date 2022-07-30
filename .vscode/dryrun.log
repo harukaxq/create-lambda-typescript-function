@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/hal/dev/hal256/create-lambda-typescript-function'
+make: Leaving directory '/home/hal/dev/hal256/create-lambda-typescript-function'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

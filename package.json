@@ -1,11 +1,16 @@
 {
   "name": "create-lambda-typescript-function",
   "version": "0.1.0",
+  "bin": "lib/cli.js",
   "main": "index.js",
   "author": "harukaxq",
   "license": "MIT",
-  "private": true,
-    "workspaces": [
+  "publish": true,
+  "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "cac": "^6.7.12",
+    "fs-extra": "^10.1.0"
+  }
 }

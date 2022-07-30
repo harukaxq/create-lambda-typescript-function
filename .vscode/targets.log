@@ -1,0 +1,303 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Jul 30 12:05:08 2022
+
+# Variables
+
+# environment
+LC_ALL = C
+# environment
+fish_color_normal = f8f8f2
+# environment
+PULSE_SERVER = /mnt/wslg/PulseServer
+# environment
+fish_color_end = ffb86c
+# environment
+HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
+# environment
+fish_pager_color_prefix = 8be9fd
+# environment
+VSCODE_CWD = /mnt/c/Users/halst/AppData/Local/Programs/Microsoft VS Code
+# environment
+fish_color_redirection = f8f8f2
+# default
+MAKE_COMMAND := make
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# environment
+fish_color_search_match = --background=44475a
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/hal/dev/hal256/create-lambda-typescript-function
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+fish_color_user = 8be9fd
+# environment
+fish_pager_color_selected_prefix = 8be9fd
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+fish_pager_color_selected_background = --background=44475a
+# environment
+fish_pager_color_background = 
+# makefile
+CURDIR := /home/hal/dev/hal256/create-lambda-typescript-function
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BUN_INSTALL = /home/hal/.bun
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+WAYLAND_DISPLAY = wayland-0
+# environment
+fish_color_keyword = ff79c6
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+fish_color_command = 8be9fd
+# makefile
+MAKEFILE_LIST := 
+# automatic
+@F = $(notdir $@)
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+fish_color_host = bd93f9
+# environment
+WT_PROFILE_ID = {60c3e313-8e1a-58f6-8175-3650c2bd2b26}
+# automatic
+*F = $(notdir $*)
+# environment
+fish_color_quote = f1fa8c
+# environment
+fish_pager_color_secondary_background = 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+fish_color_operator = 50fa7b
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ja","availableLanguages":{"*":"ja"},"_languagePackId":"29207410cd77a70b4b25e4878dda93be.ja","_translationsConfigFile":"/home/hal/.vscode-server/data/clp/29207410cd77a70b4b25e4878dda93be.ja/tcf.json","_cacheRoot":"/home/hal/.vscode-server/data/clp/29207410cd77a70b4b25e4878dda93be.ja","_resolvedLanguagePackCoreLocation":"/home/hal/.vscode-server/data/clp/29207410cd77a70b4b25e4878dda93be.ja/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/hal/.vscode-server/data/clp/29207410cd77a70b4b25e4878dda93be.ja/corrupted.info","_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+DENO_INSTALL = /home/hal/.deno
+# environment
+SHLVL = 1
+# environment
+MAKELEVEL := 0
+# environment
+fish_color_error = ff5555
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/hal/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/mnt/c/Users/halst/AppData/Local/Programs/Microsoft VS Code/bin:/home/hal/.cargo/bin:/home/hal/homebrew/bin:/home/hal/.npm-global/bin:/usr/local/sbin:/home/hal/.asdf/shims:/home/hal/.asdf/bin:/home/hal/.deno/bin:/home/hal/.yarn/bin:/home/hal/.phpenv/bin:/home/hal/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Program Files/Alacritty/:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Git/cmd:/mnt/c/HashiCorp/Vagrant/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/halst/scoop/shims:/mnt/c/Users/halst/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/halst/AppData/Local/Programs/Hyper/resources/bin:/mnt/c/Users/halst/AppData/Local/inkdrop/bin:/mnt/c/Users/halst/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/halst/AppData/Local/Microsoft/WindowsApps:/snap/bin
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+AWS_VAULT_BACKEND = pass
+# environment
+WT_SESSION = 77ea5a80-791a-441d-803d-d9862defaa41
+# environment
+fish_color_autosuggestion = 6272a4
+# environment
+fish_color_host_remote = bd93f9
+# environment
+AWS_SESSION_TOKEN_TTL = 3h
+# environment
+fish_color_option = ffb86c
+# automatic
+?F = $(notdir $?)
+# environment
+NAME = Code
+# environment
+fish_pager_color_selected_description = 6272a4
+# environment
+fish_pager_color_secondary_description = 6272a4
+# environment
+HOSTTYPE = x86_64
+# environment
+fish_pager_color_description = 6272a4
+# automatic
++F = $(notdir $+)
+# environment
+WSL_INTEROP = /run/WSL/6313_interop
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+fish_color_cwd = 50fa7b
+# environment
+LOGNAME = hal
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/halst/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# environment
+ASDF_DIR = /home/hal/.asdf
+# makefile
+.DEFAULT_GOAL := 
+# environment
+EDITOR = nvim
+# environment
+DISPLAY = :0
+# environment
+USER = hal
+# environment
+fish_pager_color_completion = f8f8f2
+# default
+MAKE_VERSION := 4.3
+# environment
+HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
+# environment
+fish_color_param = bd93f9
+# environment
+XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
+# environment
+fish_color_escape = ff79c6
+# environment
+fish_pager_color_progress = 6272a4
+# environment
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-6dc4f24c-a100-4b55-9e06-a283ef19cc7e.sock
+# environment
+fish_color_selection = --background=44475a
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/hal
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TERM = xterm-256color
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+AWS_VAULT_PASS_PREFIX = aws-vault
+# environment
+fish_pager_color_secondary_completion = f8f8f2
+# environment
+fish_color_comment = 6272a4
+# environment
+KEYTIMEOUT = 1
+# environment
+fish_pager_color_selected_completion = f8f8f2
+# environment
+fish_pager_color_secondary_prefix = 8be9fd
+# environment
+WSL_DISTRO_NAME = Ubuntu-22.04
+# environment
+fish_color_cancel = ff5555 --reverse
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# variable set hash-table stats:
+# Load=109/1024=11%, Rehash=0, Collisions=10/136=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2112, inode 6790733): 5 files, no impossibilities.
+
+# 5 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 13 / storage = 120 B / avg = 9 B
+ 
+# current buf: size = 8162 B / used = 120 B / count = 13 / avg = 9 B
+
+# strcache performance: lookups = 16 / hit rate = 18%
+# hash-table stats:
+# Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
+# Finished Make data base on Sat Jul 30 12:05:08 2022
+
+ 
