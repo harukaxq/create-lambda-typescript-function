@@ -1,12 +1,10 @@
 {
   "name": "lambda-typescript-template",
   "version": "0.1.0",
-  "description": "Boilerplate to easily create lambda functions using typescript",
-  "main": "index.js",
   "author": "harukaxq",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --platform=node --outfile=.build/index.js ",
-    "zip": "zip -j  .zip/code.zip .build/index.js",
+    "zip": "mkdir -p .zip && zip -j  .zip/code.zip .build/index.js",
     "deploy": "run-s build zip update ",
     "update": "dotenv cross-var 'aws lambda update-function-code --zip-file fileb://.zip/code.zip --function-name ${FUNCTION_NAME} && aws lambda wait function-updated --function-name ${FUNCTION_NAME}'",
     "dev": "nodemon --watch src/ --ext ts --exec 'npm run deploy'",
@@ -25,6 +23,7 @@
     "esbuild": "^0.14.38",
     "eslint": "^8.14.0",
     "jest": "27.0.0",
+    "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
