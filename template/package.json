@@ -9,11 +9,12 @@
     "update": "dotenv cross-var 'aws lambda update-function-code --zip-file fileb://.zip/code.zip --function-name ${FUNCTION_NAME} && aws lambda wait function-updated --function-name ${FUNCTION_NAME}'",
     "dev": "nodemon --watch src/ --ext ts --exec 'npm run deploy'",
     "logs": "dotenv cross-var 'awslogs  get -w /aws/lambda/${FUNCTION_NAME} '",
-    "invoke": "dotenv cross-var 'aws lambda invoke --function-name ${FUNCTION_NAME} --cli-binary-format raw-in-base64-out --payload=file://events/sample.json  out.json --log-type Tail --query LogResult --output text |  base64 -d && echo `cat out.json`'"
+    "invoke": "dotenv cross-var 'aws lambda invoke --function-name ${FUNCTION_NAME} --cli-binary-format raw-in-base64-out --payload=file://events/sample.json  out.json --log-type Tail --query LogResult --output text |  base64 -d && echo `cat out.json`'",
+    "test": "jest"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^28.1.6",
     "@types/node": "^17.0.26",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
