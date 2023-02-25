@@ -1,6 +1,6 @@
 {
   "name": "create-lambda-typescript-function",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "bin": "lib/cli.js",
   "main": "index.js",
   "author": "harukaxq",
