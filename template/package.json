@@ -1,9 +1,9 @@
 {
   "name": "lambda-typescript-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "harukaxq",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=.build/index.js ",
+    "build": "node esbuild.config.mjs",
     "zip": "mkdir -p .zip && zip -j  .zip/code.zip .build/index.js",
     "deploy": "run-s build zip update ",
     "update": "dotenv cross-var 'aws lambda update-function-code --zip-file fileb://.zip/code.zip --function-name ${FUNCTION_NAME} && aws lambda wait function-updated --function-name ${FUNCTION_NAME}'",
@@ -30,5 +30,10 @@
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.15",
     "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@sentry/esbuild-plugin": "^0.4.0",
+    "@sentry/integrations": "^7.38.0",
+    "@sentry/serverless": "^7.38.0"
   }
 }
