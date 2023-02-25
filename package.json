@@ -1,6 +1,6 @@
 {
   "name": "create-lambda-typescript-function",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "bin": "lib/cli.js",
   "main": "index.js",
   "author": "harukaxq",
@@ -12,5 +12,8 @@
   "dependencies": {
     "cac": "^6.7.12",
     "fs-extra": "^10.1.0"
+  },
+  "scripts": {
+    "template_dependencies_upgrade": "cd template && npx -p npm-check-updates  -c \"ncu -u\""
   }
 }

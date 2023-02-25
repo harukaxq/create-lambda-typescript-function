@@ -6,11 +6,9 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.47.0"
     }
     docker = {
       source  = "kreuzwerker/docker"
-      version = "2.24.0"
     }
   }
 }
@@ -35,27 +33,35 @@ module "function" {
   function_name = var.name
 
   create_package  = var.type == "docker" ? false : true
-  build_in_docker = true
   source_path = var.type == "docker" ? null : {
     path = var.build_path,
     commands = [
       "yarn install --frozen-lockfile",
-      "SENTRY_URL=${var.sentry_base_url} SENTRY_AUTH_TOKEN=${var.sentry_auth_token} SENTRY_RELEASE=${local.release} SENTRY_PROJECT_NAME=${sentry_project.this.name} yarn build",
+      <<EOF
+        SENTRY_URL=${var.sentry_base_url} \
+        SENTRY_AUTH_TOKEN=${var.sentry_auth_token} \
+        SENTRY_ORG_NAME=${var.sentry_org_name} \
+        SENTRY_RELEASE=${local.release} \
+        SENTRY_PROJECT_NAME=${sentry_project.this.name} \
+        yarn build
+      EOF
+      ,
       "cd .build",
       ":zip . ",
     ]
   }
 
-  timeout                  = var.timeout
-  memory_size              = var.memotry_size
-  ephemeral_storage_size   = var.ephemeral_storage_size
-  image_uri                = var.type == "docker" ? module.build[0].image_uri : null
-  package_type             = var.type == "docker" ? "Image" : "Zip"
-  attach_policy_statements = var.policy_statements != {} ? true : false
-  environment_variables = {
+  create_lambda_function_url = var.create_lambda_function_url
+  timeout                    = var.timeout
+  memory_size                = var.memotry_size
+  ephemeral_storage_size     = var.ephemeral_storage_size
+  image_uri                  = var.type == "docker" ? module.build[0].image_uri : null
+  package_type               = var.type == "docker" ? "Image" : "Zip"
+  attach_policy_statements   = var.policy_statements != {} ? true : false
+  environment_variables = merge({
     SENTRY_DSN     = sentry_key.this.dsn_public
     SENTRY_RELEASE = local.release
-  }
+  }, var.environment_variables)
 
   policy_statements = var.policy_statements
 }
@@ -64,6 +70,7 @@ module "build" {
   source = "terraform-aws-modules/lambda/aws//modules/docker-build"
   count  = var.type == "docker" ? 1 : 0
 
+  platform = "linux/amd64"
   create_ecr_repo = true
   ecr_repo        = var.name
   ecr_repo_lifecycle_policy = jsonencode({
@@ -88,6 +95,7 @@ module "build" {
     "SENTRY_AUTH_TOKEN"   = var.sentry_auth_token
     "SENTRY_PROJECT_NAME" = sentry_project.this.name
     "SENTRY_RELEASE"      = local.release
+    "SENTRY_ORG_NAME"     = var.sentry_org_name
   }
   image_tag   = data.archive_file.zip.output_sha
   source_path = var.build_path
@@ -96,4 +104,9 @@ data "archive_file" "zip" {
   type        = "zip"
   source_dir  = var.build_path
   output_path = "${path.module}/.build/${var.name}.zip"
+  excludes = [
+    "node_modules",
+    ".build",
+    "*.log"
+  ]
 }

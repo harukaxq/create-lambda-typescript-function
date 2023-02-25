@@ -1,6 +1,5 @@
 node_modules
 .terraform
 build/*
-builds/*
 terraform.tfstate*
 *.tfvars

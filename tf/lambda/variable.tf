@@ -40,3 +40,7 @@ variable "policy_statements" {
 variable "create_script" {
   default = true
 }
+variable "create_lambda_function_url" {
+  default = false
+}
+  
